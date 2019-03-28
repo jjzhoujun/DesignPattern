@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>计算器--简单工厂模式</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        mark {
+            background-color:#FF0000; font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+<center>
+
+    <br><br>
+    <h2 style="color:red">简易计算器</h2>
+    <br><br>
+
+    <form class="form-horizontal" role="form" action="#" th:action="@{/operation}" th:object="${OperaModel}" method="post">
+
+        <div class="form-group" style="width:500px">
+            <label class="col-sm-4 control-label">第一个数:</label>
+            <div class="col-sm-8">
+                <input type="text"  th:field="*{num1}" class="form-control" id="num1" placeholder="Enter a First Number">
+            </div>
+        </div>
+        
+        <div class="flag-operation" style="width:500px">
+          <label class="col-sm-4 control-label">运算符号:</label>
+          <select name="flag" style="width:100px;height:30px; margin:10px; font-size:20px"
+                th:field="*{opFlag}">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        </div>
+        
+        <div class="form-group" style="width:500px">
+            <label class="col-sm-4 control-label">第二个数:</label>
+            <div class="col-sm-8">
+                <input type="text"  th:field="*{num2}" class="form-control" id="num2" placeholder="Enter a Second Number">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div>
+                <button type="submit" class="btn btn-primary" id="btn">Show Answer</button>
+                <input type="reset" class="btn btn-warning" value="Reset" />
+            </div>
+        </div>
+    </form>
+
+    <!--<p th:utext="${answer}"></p>-->
+
+</center>
+
+</body>
+</html>
