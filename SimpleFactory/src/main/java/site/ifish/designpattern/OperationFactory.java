@@ -4,8 +4,8 @@ import site.ifish.designpattern.model.*;
 
 public class OperationFactory {
 
-    public static OperaModel createOperation(final String opFlag) {
-        OperaModel oper = null;
+    public static OperationModel createOperation(final String opFlag) {
+        OperationModel oper = null;
         switch (opFlag) {
             case "+":
                 oper = new OperationAdd();

@@ -6,8 +6,8 @@
 </head>
 <body>
 <h1>Result</h1>
-<div>
-    <p th:text="'content: ' + ${ResultModel.result}" />
+<div th:object="${OperationModel}">
+    <p th:text="'content: ' + *{result}" />
 </div>
 <a href="/operation">Submit another message</a>
 </body>

@@ -1,6 +1,6 @@
 package site.ifish.designpattern.model;
 
-public class OperationSub extends OperaModel {
+public class OperationSub extends OperationModel {
 
     @Override
     public float getResult(float num1, float num2) {
